@@ -1,13 +1,13 @@
 let password = prompt("Enter password: ");
 
-function isStrongPassWord(password){
-    if (password.length < 8){
-        alert("Weakpass");
-        return 0;
+function isStrongPassword(password) {
+    if (password.length < 8 || !/[A-Z]/.test(password) || !/[a-z]/.test(password) || !/[0-9]/.test(password)){
+        alert("Weak password");
+        return false;
     }
-    else{
-        for (let i = 0; i < password.length; i++){
-        
-        }
-    }
+    alert("Strong");
+    return true;
+    
 }
+
+isStrongPassword(password);
